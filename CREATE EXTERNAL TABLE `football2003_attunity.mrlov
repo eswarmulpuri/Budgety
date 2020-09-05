@@ -1,0 +1,17 @@
+CREATE EXTERNAL TABLE `football2003_attunity.mrloverride`(
+  `authorizedby` int, 
+  `authorizeddate` timestamp, 
+  `bastilleuserid` string, 
+  `id` int, 
+  `orderid` int, 
+  `packageid` int, 
+  `header__change_mask` string, 
+  `header__change_oper` string, 
+  `header__change_seq` string, 
+  `header__operation` string, 
+  `header__stream_position` string, 
+  `header__timestamp` timestamp, 
+  `header__transaction_id` string)
+STORED AS ORC
+LOCATION
+  's3://fanatics.${ENV}.internal.confidential/fanhouse/data/raw_fanatics/rf_mrloverride_w/';
